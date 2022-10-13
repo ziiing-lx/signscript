@@ -19,12 +19,14 @@
 
 2. [点我下载脚本](https://gitee.com/huihui_lx/resource/raw/master/signscript.jar) 
 
-3. 在文件夹中找到该脚本对应的目录, 在上面输入 cmd 然后回车。如下图
+3. 在文件夹中找到该脚本对应的目录, 在上面输入 cmd 然后回车。如下图：
 
    ![](https://gitee.com/huihui_lx/resource/raw/master/1.jpg)
    ![](https://gitee.com/huihui_lx/resource/raw/master/2.jpg)
 
-4. 使用 **java -jar xxxx(脚本名)**, 比如脚本名为 signscript.java, 则执行 **java -jar signscript.java** 命令, 即可运行脚本
+4. 使用 **java -jar xxxx(脚本名)**, 比如脚本名为 signscript.java, 则执行 **java -jar signscript.java** 命令, 即可运行脚本。如图：
+
+   ![](https://gitee.com/huihui_lx/resource/raw/master/3.jpg)
 
 ### 签到流程
 
@@ -34,11 +36,12 @@
 
 ### 注意事项
 
-1. 每次只能签最近的一次签到。若短时间内有两个签到，在你签完了最新的签到之后，在这个最新的签到过期之前无法签这之前签到。
+1. 每次只能签最近的一次签到。若短时间内有两个签到，在你签完了最新的签到之后，在这个最新的签到任务过期之前无法签这个任务之前的签到任务。比如：你在10:00，和 10:05 各有一个签到任务，而你在 10:06 才去用脚本签到，那么此时会对 10:05 的这个任务进行签到，在这个签到任务过期之前，无法对 10:00 的这个签到任务进行签到。
 
 ### 附
 
 + 大学时代，最值钱的是时间，最不值钱的也是时间。脚本虽好，望大家理智使用。
++ 如有任何问题，可提 issue。或者通过 1652020353@qq.com 联系我。
 
 
 
