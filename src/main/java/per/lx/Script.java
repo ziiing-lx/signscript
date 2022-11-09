@@ -1,5 +1,6 @@
 package per.lx;
 
+import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import org.springframework.http.ResponseEntity;
@@ -98,10 +99,17 @@ public class Script {
                     String qrCodeSign = Utils.QRCodeSign(enc, name, activeId, cookies);
                     System.out.println(qrCodeSign);
                     return;
+                }else if("0".equals(otherId) && "1".equals(activeStatus)) {
+                    System.out.println("---查到了一个普通签到---");
+                    System.out.println("开始为您签到...");
+                    String ordinarySign = Utils.OrdinarySIGN(activeId, cookies);
+                    JSONObject jsonObject1 = JSON.parseObject(ordinarySign);
+                    String msg = jsonObject1.get("msg").toString();
+                    System.out.println(msg);
+                    return;
                 }
             }
-            System.out.println("无签到课程");
-            return;
         }
+        System.out.println("无签到课程");
     }
 }

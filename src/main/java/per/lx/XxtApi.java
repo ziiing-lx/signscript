@@ -7,4 +7,5 @@ public interface XxtApi {
     String PRE_SIGN = "https://mobilelearn.chaoxing.com/newsign/preSign?activePrimaryId=";
     String LOCATION_SIGN = "https://mobilelearn.chaoxing.com/pptSign/stuSignajax?name=";
     String QRCODE_SIGN = "https://mobilelearn.chaoxing.com/pptSign/stuSignajax?enc=";
+    String Ordinary_SIGN = "https://mobilelearn.chaoxing.com/v2/apis/sign/signIn?activeId=";
 }

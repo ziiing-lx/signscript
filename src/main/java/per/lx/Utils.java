@@ -91,4 +91,14 @@ public class Utils {
         ResponseEntity<String> entity = restTemplate.exchange(url, HttpMethod.GET, httpEntity, String.class);
         return entity.getBody();
     }
+
+    public static String OrdinarySIGN(String activeId, List<String> cookies) {
+        String url = XxtApi.Ordinary_SIGN + activeId;
+        HttpHeaders headers = new HttpHeaders();
+        headers.put(HttpHeaders.COOKIE, cookies);
+        Map<String, Object> paramMap = new HashMap<>();
+        HttpEntity<Map<String, Object>> httpEntity = new HttpEntity<>(paramMap, headers);
+        ResponseEntity<String> entity = restTemplate.exchange(url, HttpMethod.GET, httpEntity, String.class);
+        return entity.getBody();
+    }
 }
